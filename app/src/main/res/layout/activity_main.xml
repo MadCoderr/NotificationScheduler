@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.farooqi.notificationscheduler.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:text="@string/lbl_heading"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+    <RadioGroup
+        android:id="@+id/rag_network"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rab_no_network"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/none" />
+
+        <RadioButton
+            android:id="@+id/rab_any_network"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/any" />
+
+        <RadioButton
+            android:id="@+id/rab_wifi_network"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wifi" />
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:text="@string/requires"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:orientation="horizontal">
+
+        <Switch
+            android:id="@+id/sw_idle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/idle" />
+
+        <Switch
+            android:id="@+id/sw_char"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/device_chargin" />
+
+    </LinearLayout>
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/periodic"
+        android:id="@+id/sw_periodic"
+        android:layout_margin="4dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/override_deadline"
+            android:id="@+id/lbl_sk_bar_label"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/not_et"
+            android:id="@+id/lbl_sk_bar_progress"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"/>
+
+    </LinearLayout>
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sk_bar"
+        android:layout_margin="4dp"/>
+
+    <Button
+        android:id="@+id/btn_sch_job"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="4dp"
+        android:onClick="scheduleJob"
+        android:text="@string/job_schedule" />
+
+    <Button
+        android:id="@+id/btn_can_job"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="4dp"
+        android:onClick="cancelJobs"
+        android:text="@string/job_cancel" />
+</LinearLayout>
